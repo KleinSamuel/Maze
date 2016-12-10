@@ -149,7 +149,14 @@ public class MazeGenerator {
 		else{
 			currentCell = stack.pop();
 		}
-		
+	}
+	
+	public void setUnvisited(Maze maze){
+		for (int i = 0; i < maze.grid.length; i++) {
+			for (int j = 0; j < maze.grid[i].length; j++) {
+				maze.grid[i][j].wasVisited = false;
+			}
+		}
 	}
 	
 	/**
